@@ -1,4 +1,4 @@
-class Matcha < Formula
+class MatchaLang < Formula
   desc "Experimental compiled language for match-first backend programming"
   homepage "https://github.com/mario-nowak/matcha"
   version "0.1.0"
