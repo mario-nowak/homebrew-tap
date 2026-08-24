@@ -1,17 +1,17 @@
 class MatchaLang < Formula
   desc "Experimental compiled language for match-first backend programming"
   homepage "https://github.com/mario-nowak/matcha"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
+
+  depends_on "bdw-gc"
 
   on_macos do
     on_arm do
-      url "https://github.com/mario-nowak/matcha/releases/download/matcha-compiler-v0.1.1/matcha-compiler-v0.1.1-macos-arm64.tar.gz"
-      sha256 "8a430719f890804078d4dd53025a3ce1b64c399aeef8a0762e0cb68ccd56af93"
+      url "https://github.com/mario-nowak/matcha/releases/download/matcha-compiler-v0.1.2/matcha-compiler-v0.1.2-macos-arm64.tar.gz"
+      sha256 "0b7b97dbbca8978809da11e6773ac0ccdf27b514c44efef210378c06a90d7329"
     end
   end
-
-  depends_on "bdw-gc"
 
   def install
     bin.install "bin/matcha"
@@ -33,6 +33,6 @@ class MatchaLang < Formula
     EOS
 
     system bin/"matcha", "emit", "hello.mt"
-    assert_predicate testpath/"hello-emission.ll", :exist?
+    assert_path_exists testpath/"hello-emission.ll"
   end
 end
