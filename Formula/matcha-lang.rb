@@ -1,15 +1,15 @@
 class MatchaLang < Formula
   desc "Experimental compiled language for match-first backend programming"
   homepage "https://github.com/mario-nowak/matcha"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   depends_on "bdw-gc"
 
   on_macos do
     on_arm do
-      url "https://github.com/mario-nowak/matcha/releases/download/matcha-compiler-v0.2.0/matcha-compiler-v0.2.0-macos-arm64.tar.gz"
-      sha256 "326e4fd690908d4c979b980b91068819bbd4814a99333122e04fec10807b4eb9"
+      url "https://github.com/mario-nowak/matcha/releases/download/matcha-compiler-v0.3.0/matcha-compiler-v0.3.0-macos-arm64.tar.gz"
+      sha256 "a548cc8cd8a6f5310ca62bba8bc9e5a3eafd931375075c11019aa02499823cc3"
     end
   end
 
